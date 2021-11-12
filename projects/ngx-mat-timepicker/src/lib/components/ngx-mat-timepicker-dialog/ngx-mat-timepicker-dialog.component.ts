@@ -26,8 +26,11 @@ export class NgxMatTimepickerDialogComponent extends NgxMatTimepickerBaseDirecti
         super(timepickerSrv, eventSrv, locale, data);
     }
 
-    close(): void {
-        this._dialogRef.close();
+    cancel(): void {
+        this._dialogRef.close(false);
     }
-
+    close(): void{
+        this.setTime();        
+        this._dialogRef.close(true);
+    }
 }

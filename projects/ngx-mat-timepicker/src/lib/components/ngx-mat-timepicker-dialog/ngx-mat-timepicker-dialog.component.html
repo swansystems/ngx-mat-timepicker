@@ -73,11 +73,11 @@
     </ngx-mat-timepicker-content>
 </div>
 <div mat-dialog-actions>
-    <div (click)="close()">
+    <div (click)="cancel()">
         <ng-container
                 *ngTemplateOutlet="data.cancelBtnTmpl ? data.cancelBtnTmpl : cancelBtnDefault"></ng-container>
     </div>
-    <div (click)="setTime()">
+    <div (click)="close()">
         <ng-container
                 *ngTemplateOutlet="data.confirmBtnTmpl ? data.confirmBtnTmpl : confirmBtnDefault"></ng-container>
     </div>

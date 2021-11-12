@@ -66,8 +66,8 @@ export class NgxMatTimepickerBaseDirective implements OnInit, OnDestroy {
         this.activeTimeUnit = unit;
     }
 
-    close(): void {
-        this.data.timepickerBaseRef.close();
+    close(res: boolean): void {
+        this.data.timepickerBaseRef.close(res);
     }
 
     ngOnDestroy(): void {
@@ -112,7 +112,6 @@ export class NgxMatTimepickerBaseDirective implements OnInit, OnDestroy {
 
     setTime(): void {
         this.data.timepickerBaseRef.timeSet.next(this._timepickerSrv.getFullTime(this.data.format));
-        this.close();
     }
 
     protected _defineTime(): void {

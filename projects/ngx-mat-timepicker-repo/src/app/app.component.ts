@@ -29,5 +29,7 @@ export class NgxMatTimepickerAppComponent {
         this.selectedTheme = theme;
         document.body.classList.toggle("dark-theme", !!theme.value);
     }
-
+    timepickerClose($event): void{
+        console.log($event);
+    }
 }

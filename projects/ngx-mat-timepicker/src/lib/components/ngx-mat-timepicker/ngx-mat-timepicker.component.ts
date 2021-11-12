@@ -202,8 +202,8 @@ export class NgxMatTimepickerComponent implements NgxMatTimepickerRef {
             });
             this._dialogRef
                 .afterClosed()
-                .subscribe(() => {
-                    this.closed.emit();
+                .subscribe((res) => {
+                    this.closed.emit(res);
                 });
         }
         this.opened.emit();
